@@ -1,0 +1,109 @@
+nav {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 1000;
+  padding: 0 5%;
+}
+
+.navbar {
+  background-color: rgba(0, 0, 0, 0.7);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  margin: 10px auto;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  max-width: 1400px;
+}
+
+.navbar-brand {
+  font-size: 1.8rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  background: linear-gradient(45deg, #ff3366, #ff9966);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+  transition: all 0.3s ease;
+  position: relative;
+  padding: 0 4px;
+}
+
+.navbar-brand:hover {
+  transform: scale(1.05);
+  letter-spacing: 1.2px;
+  text-shadow: 
+    0 0 5px rgba(255,51,102,0.5),
+    0 0 10px rgba(255,153,102,0.3);
+}
+
+.navbar-brand::after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #ff3366, #ff9966, transparent);
+  transform: scaleX(0);
+  transition: transform 0.1s ease;
+}
+
+.navbar-brand:hover::after {
+  transform: scaleX(1);
+}
+
+.navbar-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-link {
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  color: rgba(255, 255, 255, 0.85);
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  color: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
+}
+
+.nav-link.active {
+  background: linear-gradient(45deg, rgba(255, 107, 107, 0.2), rgba(255, 160, 122, 0.2));
+  border: 1px solid rgba(255, 107, 107, 0.3);
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 1rem;
+  }
+
+  .navbar-brand {
+    font-size: 1.4rem;
+  }
+
+  .navbar-links {
+    gap: 0.8rem;
+  }
+
+  .nav-link {
+    padding: 0.5rem 0.8rem;
+  }
+}
