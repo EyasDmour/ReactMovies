@@ -1,0 +1,30 @@
+.movie-ratings {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ratings-circle {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ratings-circle-inner {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ratings-value {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
