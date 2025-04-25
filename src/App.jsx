@@ -7,16 +7,18 @@ import { MovieProvider } from './contexts/MovieContexts';
 
 
 function App() {
-    return <MovieProvider>
-        <NavBar />
-        <main className='main-content'>
-            <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/Favorite" element={<Favorite />} />
-            </Routes>
-        </main>
-    </MovieProvider>
+    return <>
+        <MovieProvider>
+            <NavBar />
+            <main className='main-content'>
+                <Routes>
+                    <Route path="/" element={<Home />} />
+                    <Route path="/Favorite" element={<Favorite />} />
+                </Routes>
+            </main>
+        </MovieProvider>
 
+    </>
 }
 
 export default App
